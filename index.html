@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Object Detection AI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: #f4f7ff;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #29324a;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #66e3ff;
+        }
+
+        nav a {
+            color: #d7e0f5;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            padding: 85px 8% 65px;
+            text-align: center;
+            background: radial-gradient(ellipse at top, #193568, #0b1020 70%);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 15px;
+            border: 1px solid #367dbe;
+            border-radius: 30px;
+            color: #66e3ff;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(35px, 6vw, 60px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #66e3ff;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 28px;
+            color: #c2cce0;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #66e3ff;
+            color: #08101e;
+            padding: 13px 23px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid #657594;
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 720px;
+            color: #b9c5dc;
+            margin: 0 auto 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #141d32;
+            border: 1px solid #2b3956;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .card .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #66e3ff;
+            margin-bottom: 8px;
+        }
+
+        .card p, .steps li {
+            color: #c2cce0;
+        }
+
+        .workflow {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .steps li {
+            margin: 12px 0 12px 25px;
+            padding-left: 5px;
+        }
+
+        .notice {
+            background: #141d32;
+            border-left: 4px solid #66e3ff;
+            padding: 22px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 28px;
+            color: #aab7ce;
+            border-top: 1px solid #29324a;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                padding-top: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AI Vision</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="tag">Machine Learning Project</div>
+
+        <h1>Real-Time <span>Object Detection</span></h1>
+
+        <p>
+            An AI-powered computer vision project that detects people
+            and common objects from a live webcam using a pretrained
+            YOLO model and OpenCV.
+        </p>
+
+        <a class="button"
+           href="https://github.com/rajeevreddydantanupally-creator/real_time_object_detection">
+            View Source Code
+        </a>
+
+        <a class="button secondary" href="#about">
+            Explore Project
+        </a>
+    </section>
+
+    <section id="about">
+        <h2>About the Project</h2>
+
+        <p class="intro">
+            Object detection is a computer vision task that identifies
+            objects in an image or video and locates them using
+            bounding boxes. This project applies a pretrained deep
+            learning model to webcam frames in real time.
+        </p>
+
+        <div class="notice">
+            <strong>Project objective:</strong>
+            Build a practical AI system that can recognize supported
+            objects, display their labels, and show confidence scores
+            on a live camera feed.
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Key Features</h2>
+
+        <p class="intro">
+            A simple demonstration of modern AI-based computer vision.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="icon">📷</div>
+                <h3>Live Camera</h3>
+                <p>Captures video frames from the laptop webcam using OpenCV.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>YOLO Detection</h3>
+                <p>Uses a pretrained deep learning model to recognize supported objects.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Bounding Boxes</h3>
+                <p>Draws boxes and object labels around detected items.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Confidence Scores</h3>
+                <p>Displays the model's confidence score for each detection.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow">
+        <h2>How It Works</h2>
+
+        <p class="intro">
+            The program processes the camera feed frame by frame.
+        </p>
+
+        <div class="workflow">
+            <ol class="steps">
+                <li>Open the webcam using OpenCV.</li>
+                <li>Capture a video frame.</li>
+                <li>Pass the frame to the pretrained YOLO model.</li>
+                <li>Identify supported objects and their locations.</li>
+                <li>Draw bounding boxes, labels, and confidence scores.</li>
+                <li>Display the annotated frame until the user presses Q.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technologies Used</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Python</h3>
+                <p>Main programming language used to build the application.</p>
+            </div>
+
+            <div class="card">
+                <h3>Ultralytics YOLO</h3>
+                <p>Loads the pretrained object detection model and runs inference.</p>
+            </div>
+
+            <div class="card">
+                <h3>OpenCV</h3>
+                <p>Captures webcam video and displays the detection results.</p>
+            </div>
+        </div>
+
+        <div class="notice">
+            <strong>Important:</strong> This website documents the project.
+            The Python webcam application runs locally on a computer with
+            Python, the required packages, and a compatible camera.
+            The website itself does not run the Python detection program.
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Real-Time Object Detection System</p>
+    <p>Developed by Rajeev Reddy | Machine Learning Project</p>
+</footer>
+
+</body>
+</html>
